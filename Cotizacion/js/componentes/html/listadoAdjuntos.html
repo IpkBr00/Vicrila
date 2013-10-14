@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Workflow Manager</title>
+
+    <style type="text/css">
+        .tag {
+            font-size: 8px;
+            padding: 5px;
+        }
+        .accionesPendientes{
+            display: inline-block;
+        }
+        .accionesCompletadas{
+            display: inline-block;
+        }
+        .inlineButton{
+            background-color: transparent;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .boton{
+            border: 1px solid #888;
+            padding: 3px 10px;
+        }
+
+        .boton:hover{
+            border: 2px solid #666;
+            padding: 2px 9px;
+        }
+
+        .boton:active{
+            border: 1px solid #666;
+            padding: 2px 9px;
+            background-color: #DDD;
+        }
+    </style>
+</head>
+<body>
+<div id='listadoAdjuntos'>
+
+    <div id='dialogoAdjuntos'>
+       <div id='tablaAdjuntos' class='listado '>
+            <table class='tabla' style='margin: 0px;'>
+                <thead>
+                    <tr>
+                        <th class="width40p textAlignCentro">Tipo</th>
+                        <th class="width40p textAlignCentro">Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/template" id='filaTemplate'>
+    <tr id='${idDocumento}'>
+        <td>${tipo} </td>
+        <td class='textAlignCentro'>
+            <a href="${url}" target='_blank' >
+                ${nombre}
+            </a>
+                {{if app.seguridad.grupoActual == 'cotiz_analitica' || app.seguridad.grupoActual == 'cotiz_comercial'}}
+                    <div class='accionesCompletadas'>
+                        <a href="#" class='inlineButton' alt='Eliminar el documento del dossier.' title='Eliminar el documento del dossier.' >
+                            <span class='icon-remove btnEliminarDocumento'></span>
+                        </a>
+                    </div>
+                {{/if}}
+        </td>
+    </tr>
+</script>
+</body>
+</html>

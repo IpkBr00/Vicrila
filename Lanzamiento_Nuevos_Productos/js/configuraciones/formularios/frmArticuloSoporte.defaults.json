@@ -1,0 +1,113 @@
+[
+	{
+		"Seccion": "Desarrollo Producto",
+		"Id": "DesarrolloProducto",
+		"Campos":
+		[		
+			{
+				"nombre": "unidadMedidaBase",
+				"tipo": "text",
+				"valor" : "UD"
+			},
+			{
+				"nombre": "alamacenDefecto",
+				"tipo": "text",
+				"valor" : "25"
+			},
+			{
+				"nombre": "tipoArticulo",
+				"tipo": "text",
+				"valor" :"SOPORTE"
+			}
+		]
+	},
+	{
+		"Seccion": "Supply Chain",
+		"Id": "SupplyChain",
+		"Campos":
+		[
+			{
+				"nombre": "precisionRedondeo",
+				"tipo": "text",
+				"valor" :"1"
+			},
+			{
+				"nombre": "metodoBaja",
+				"tipo": "text",
+				"valor" :"MANUAL"
+			},
+			{
+				"nombre": "politicaReaprovisionamiento",
+				"tipo": "text",
+				"valor" :"LOTE A LOTE"
+
+			},
+			{
+				"nombre": "cicloReaprovisionamiento",
+				"tipo": "text",
+				"valor" :"1M"
+			},
+			{
+				"nombre": "reaprovisionamientoCaptor",
+				"tipo": "text",
+				"valor" :"NO"
+			}
+		]
+	},
+	{
+		"Seccion": "Finanzas",
+		"Id": "Finanzas",
+		"Campos":
+		[
+			{
+				"nombre": "valoracionExistencias",
+				"tipo": "combo",
+				"valor": "MEDIO"
+			},
+			{
+				"nombre": "grupoContableProducto",
+				"tipo": "combo",
+				"valor": "EN CURSO"
+			},
+			{
+				"nombre": "grupoRegistroIva",
+				"tipo": "combo",
+				"valor": "IVA 18"
+
+			},
+			{
+				"nombre": "GrupoContableExistencias",
+				"tipo": "combo",
+				"valor" : "ENCURSVCL"
+
+			}
+		]
+	},
+	{
+		"Seccion": "Produccion",
+		"Id": "Produccion",
+		"Campos":
+		[
+			{
+				"nombre": "jefeEquipoComposicionFusion",
+				"tipo": "text",
+				"valor" : "0,2"				
+			},
+			{
+				"nombre": "oficialMaquinasRegulador",
+				"tipo": "text",
+				"valor" : "0,167"
+			},
+			{
+				"nombre": "maquinistaProduccion",
+				"tipo": "text",
+				"valor" : "0,2"
+			},
+			{
+				"nombre": "oficialMaquina",
+				"tipo": "text",
+				"valor" : "1,000"
+			}
+		]
+	}
+]

@@ -1,0 +1,119 @@
+[
+	{
+		"Seccion": "Desarrollo Producto",
+		"Id": "DesarrolloProducto",
+		"Campos":
+		[		
+			{
+				"label": "Unidad medida base",
+				"nombre": "unidadMedidaBase",
+				"tipo": "text",
+				"valor" : "UD"
+			},
+			{
+				"label": "Almacén defecto",
+				"nombre": "alamacenDefecto",
+				"tipo": "text",
+				"valor" : "01"
+			},
+			{
+				"label": "Unidades Venta por Palet",
+				"nombre": "unnidadesVentaPalet",
+				"tipo": "text",
+				"valor" : "500"
+			},
+			{
+				"label": "Tipo artículo",
+				"nombre": "tipoArticulo",
+				"tipo": "text",
+				"valor" : "EMBALAJE"
+			},
+			{
+				"label": "ECOEMBES",
+				"nombre": "ecoembes",
+				"tipo": "combo",
+				"valor" : "SI"
+			}
+		]
+	},
+	{
+		"Seccion": "Compras",
+		"Id": "Compras",
+		"Campos":
+		[
+			{
+				"label": "Sistema reposición",
+				"nombre": "sistemaReposicion",
+				"tipo": "text",
+				"valor" : "COMPRA"
+			},
+			{
+				"label": "Área de compra",
+				"nombre": "areaCompra",
+				"tipo": "combo",
+				"valor" : "020-Packaging materials"
+			}
+		]
+	},
+	{
+		"Seccion": "Supply Chain",
+		"Id": "SupplyChain",
+		"Campos":
+		[
+			{
+				"label": "Tipo palet",
+				"nombre": "tipoPalet",
+				"tipo": "combo",
+				"valor" : "E64"
+			},
+			{
+				"label": "Zona almacenaje ADAIA",
+				"nombre": "zonaAlmacenajeADAIA",
+				"tipo": "text",
+				"valor" : "AEE"
+			},
+			{
+				"label": "Politica reaprovisionamiento",
+				"nombre": "politicaReaprovisionamiento",
+				"tipo": "text",
+				"valor" : "Cdad. Fija reaprov."
+			}
+		]
+	},
+	{
+		"Seccion": "Finanzas",
+		"Id": "Finanzas",
+		"Campos":
+		[
+			{
+				"label": "Valoración Existencias",
+				"nombre": "valoracionçExistencias",
+				"tipo": "combo",
+				"valor" : "MEDIO"
+			},
+			{
+				"label": "Grupo contable producto",
+				"nombre": "grupoContableProducto",
+				"tipo": "combo",
+				"valor" : "EMBALAJES"
+			},
+			{
+				"label": "Grupo registro IVA",
+				"nombre": "grupoRegistroIva",
+				"tipo": "combo",
+				"valor" : "IVA18"
+			},
+			{
+				"label": "Grupo contable existencias",
+				"nombre": "GrupoContableExistencias",
+				"tipo": "combo",
+				"valor" : "EMBALAJE"
+			}
+		]
+	},
+	{
+		"Seccion": "Responsable Almacén",
+		"Id": "ResponsableAlmacen",
+		"Campos":[]
+	}
+]

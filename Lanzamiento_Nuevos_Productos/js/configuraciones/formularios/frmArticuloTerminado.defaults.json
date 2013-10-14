@@ -1,0 +1,173 @@
+[
+	{
+		"Seccion": "Desarrollo Producto",
+		"Id": "DesarrolloProducto",
+		"Campos":
+		[		
+			{
+				"label": "Unidad medida base",
+				"nombre": "unidadMedidaBase",
+				"tipo": "text",
+				"valor" : "UD"
+			},
+			{
+				"label": "Almacén defecto",
+				"nombre": "alamacenDefecto",
+				"tipo": "text",
+				"valor" : "21"
+			},
+			{
+				"label": "Unidad medida venta",
+				"nombre": "unidadMedidaVenta",
+				"tipo": "text",
+				"valor" : "UD"
+			},
+			{
+				"label": "Peso Neto unidad venta",
+				"nombre": "pesoNetoUnidadVenta",
+				"tipo": "text",
+				"valor" : "0"
+			},
+			{
+				"label": "Peso Bruto palet",
+				"nombre": "pesoBrutoPalet",
+				"tipo": "text",
+				"valor" : "0"
+			},
+			{
+				"label": "Peso Neto palet",
+				"nombre": "pesoNetoPalet",
+				"tipo": "text",
+				"valor" : "0"
+			},
+			{
+				"label": "Decorado",
+				"nombre": "decorado",
+				"tipo": "text",
+				"valor" : "0000"
+			},
+			{
+				"label": "Tipo artículo de producción",
+				"nombre": "tipoArticulo",
+				"tipo": "text",
+				"valor" : "TERMINADO"
+			}
+		]
+	},
+	{
+		"Seccion": "Supply Chain",
+		"Id": "SupplyChain",
+		"Campos":
+		[
+			{
+				"label": "Precisión redondeo",
+				"nombre": "precisionRedondeo",
+				"tipo": "text",
+				"valor" : "1"
+			},
+			{
+				"label": "Método de  baja",
+				"nombre": "metodoBaja",
+				"tipo": "text",
+				"valor" : "MANUAL"
+			},
+			{
+				"label": "Politica reaprovisionamiento",
+				"nombre": "politicaReaprovisionamiento",
+				"tipo": "text",
+				"valor" : "LOTE A LOTE"
+			},
+			{
+				"label": "Ciclo reaprovisionamiento",
+				"nombre": "cicloReaprovisionamiento",
+				"tipo": "text",
+				"valor" : "1M"
+			},
+			{
+				"label": "Zona almacenaje ADAIA",
+				"nombre": "zonaAlmacenajeADAIA",
+				"tipo": "text",
+				"valor" : "GDN"
+			}
+		]
+	},
+	{
+		"Seccion": "Comercial",
+		"Id": "Comercial",
+		"Campos":[]
+	},
+	{
+		"Seccion": "Finanzas",
+		"Id": "Finanzas",
+		"Campos":
+		[
+			{
+				"label": "Valoración Existencias",
+				"nombre": "valoracionçExistencias",
+				"tipo": "combo",
+				"valor" : "MEDIO"
+			},
+			{
+				"label": "Grupo contable producto",
+				"nombre": "grupoContableProducto",
+				"tipo": "combo",
+				"valor" : "TERM VCL"
+			},
+			{
+				"label": "Grupo registro IVA",
+				"nombre": "grupoRegistroIva",
+				"tipo": "combo",
+				"valor" : "IVA18"
+			},
+			{
+				"label": "Grupo contable existencias",
+				"nombre": "GrupoContableExistencias",
+				"tipo": "combo",
+				"valor" : "TERM VCL"
+			},
+			{
+				"label": "Pais",
+				"nombre": "pais",
+				"tipo": "text",
+				"valor" : "ES"
+			}
+		]
+	},
+	{
+		"Seccion": "Produccion",
+		"Id": "Produccion",
+		"Campos":
+		[
+			{
+				"label": "2021-Inspector de Calidad",
+				"nombre": "inspectorCalidad",
+				"tipo": "text",
+				"valor" : "0,167"
+			},
+			{
+				"label": "2033-Mecánico Final de Línea",
+				"nombre": "mecanicoFinalLínea",
+				"tipo": "text",
+				"valor" : "0,167"
+			},
+			{
+				"label": "2007-Carrista",
+				"nombre": "carrista",
+				"tipo": "text",
+				"valor" : "0,4"
+			},
+			{
+				"label": "2004-Auxiliar",
+				"nombre": "auxiliar",
+				"tipo": "text",
+				"valor" : "0,330"
+			},
+			{
+				"label": "2028-Maquinista de Final de Línea",
+				"nombre": "maquinistaFinalLinea",
+				"tipo": "text",
+				"valor" : "0,500"
+			},
+		]
+	}
+]

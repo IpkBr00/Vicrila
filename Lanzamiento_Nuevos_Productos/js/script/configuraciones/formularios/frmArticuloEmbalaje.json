@@ -1,0 +1,253 @@
+[
+	{
+		"Seccion": "Desarrollo Producto",
+		"Id": "DesarrolloProducto",
+		"Campos":
+		[		
+			{
+				"label": "Nº (Código)",
+				"nombre": "codigo",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Descripción",
+				"nombre": "descripcion",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Descripción2",
+				"nombre": "descripcion2",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Unidad medida base",
+				"nombre": "unidadMedidaBase",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Almacén defecto",
+				"nombre": "alamacenDefecto",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Peso Bruto",
+				"nombre": "pesoBruto",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Unidades Venta por Palet",
+				"nombre": "unnidadesVentaPalet",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Tipo artículo",
+				"nombre": "tipoArticulo",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "ECOEMBES",
+				"nombre": "ecoembes",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Cód. Calidad cartón",
+				"nombre": "codigoCalidadCarton",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Longitud total",
+				"nombre": "longitudTotal",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Anchura total",
+				"nombre": "anchuraTotal",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Nº Poses",
+				"nombre": "numPoses",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Code Plan",
+				"nombre": "codePlan",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Plan paletización",
+				"nombre": "planPaletizacion",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Cód. datos impresión",
+				"nombre": "codigoDatosImpresion",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "CptStd",
+				"nombre": "ptStd",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Impresión exterior",
+				"nombre": "impresionExterior",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Impresión interior",
+				"nombre": "impresionInterior",
+				"tipo": "text",
+				"validacion" : ""
+			}			
+		]
+	},
+	{
+		"Seccion": "Compras",
+		"Id": "Compras",
+		"Campos":
+		[
+			{
+				"label": "Sistema reposición",
+				"nombre": "sistemaReposicion",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Unidad medida de compra",
+				"nombre": "unidadMedidaCompra",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Plazo entrega",
+				"nombre": "plazoEntrega",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Área de compra",
+				"nombre": "areaCompra",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Agrupaciones de compra",
+				"nombre": "agrupacionesCompra",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Familias de compra",
+				"nombre": "familiasCompra",
+				"tipo": "combo",
+				"validacion" : ""
+			}
+		]
+	},
+	{
+		"Seccion": "Supply Chain",
+		"Id": "SupplyChain",
+		"Campos":
+		[
+			{
+				"label": "% Merma embalaje (% rechazo)",
+				"nombre": "porcentajeMermaEmbalaje",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Tipo palet",
+				"nombre": "tipoPalet",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Zona almacenaje ADAIA",
+				"nombre": "zonaAlmacenajeADAIA",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Politica reaprovisionamiento",
+				"nombre": "politicaReaprovisionamiento",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Aprovisionamiento CAPTOR-ADAIA",
+				"nombre": "aprovisionamientoCaptorAdaia",
+				"tipo": "combo",
+				"validacion" : "required"
+			}
+		]
+	},
+	{
+		"Seccion": "Finanzas",
+		"Id": "Finanzas",
+		"Campos":
+		[
+			{
+				"label": "Valoración Existencias",
+				"nombre": "valoracionçExistencias",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Grupo contable producto",
+				"nombre": "grupoContableProducto",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Grupo registro IVA",
+				"nombre": "grupoRegistroIva",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Grupo contable existencias",
+				"nombre": "GrupoContableExistencias",
+				"tipo": "combo",
+				"validacion" : "required"
+			}
+		]
+	},
+	{
+		"Seccion": "Responsable Almacén",
+		"Id": "ResponsableAlmacen",
+		"Campos":
+		[
+			{
+				"label": "Familia de Almacén",
+				"nombre": "familiaAlmacen",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "División de Almacén",
+				"nombre": "divisionAlmacen",
+				"tipo": "text",
+				"validacion" : ""
+			}
+		]
+	}
+]

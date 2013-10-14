@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="../js/componentes/QueryBuilder/css/queryBuilder.css">
+    <!-- CONTROL -->
+    <div class='queryBuilder'>
+        <div class='header'>
+            <div class="entitySelector">
+                <label for="entidad">Entidad</label>
+                <select id="entidad"></select>
+            </div>
+            <div class="entityActions">
+                <input type="button" value="Empezar"  class="initial"/>
+                <input type="button" value="Consultar"  class="edition" accesskey="R"/>
+                <input type="button" value="Limpiar"  class="edition"/>
+            </div>
+            <div class="clearFix"></div>
+        </div>
+        <div class='body'>
+            <div class='conditionBuilder'>
+                <table>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <input type="button" value="+" class='addCondition'>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- PLANTILLAS -->
+    <script type="text/template" id="optionModelos">
+        <option value="${IdModelo}">${Nombre}</option>
+    </script>
+    <script type="text/template" id="filaCondicion">
+        <tr>
+            <td>
+                <select id="joinSelector">
+                    <option value="AND">AND</option>
+                    <option value="OR">OR</option>
+                </select>
+            </td>
+            <td>
+                <select id="fieldSelector" >
+                    <option value="-1">Selecciona un campo</option>
+                </select>
+            </td>
+            <td>
+                <select id="operatorSelector">
+                </select>
+            </td>
+            <td>
+                <input type="text" >
+            </td>
+        </tr>
+    </script>
+    <script type="text/template" id="optionCamposTemplate">
+        <option value="${IdCampoModelo}">${Nombre}</option>
+    </script>
+    <script type="text/template" id="operadorStringTemplate">
+        <select class="operatorSelector">
+            <option value="empiezaPor">Empieza por</option>
+            <option value="contiene">Contiene</option>
+            <option value="igual">Igual</option>
+            <option value="distinto">Distinto</option>
+            <option value="terminaPor">Termina por</option>
+        </select>
+    </script>
+    <script type="text/template" id="operadorInt32Template">
+        <select class="operatorSelector">
+            <option value="menorIgual">Menor o igual que</option>
+            <option value="menor">Menor que</option>
+            <option value="igual">Igual a </option>
+            <option value="distinto">Distinto de</option>
+            <option value="mayor">Mayor que</option>
+            <option value="mayorIgual">Mayor o igual que</option>
+        </select>
+    </script>
+    <script type="text/template" id="operadorDoubleTemplate">
+        <select class="operatorSelector">
+            <option value="menorIgual">Menor o igual que</option>
+            <option value="menor">Menor que</option>
+            <option value="igual">Igual a </option>
+            <option value="distinto">Distinto de</option>
+            <option value="mayor">Mayor que</option>
+            <option value="mayorIgual">Mayor o igual que</option>
+        </select>
+    </script>
+    <script type="text/template" id="operadorBooleanTemplate">
+        <select class="operatorSelector">
+            <option value="menorIgual">Menor o igual que</option>
+            <option value="menor">Menor Que</option>
+            <option value="igual">Igual A </option>
+            <option value="mayor">Mayor Que</option>
+            <option value="mayorIgual">Mayor o igual que</option>
+        </select>
+    </script>
+    <script type="text/template" id="operadorDateTimeTemplate">
+        <select class="operatorSelector">
+            <option value="menorIgual">Menor o igual que</option>
+            <option value="menor">Menor que</option>
+            <option value="igual">Igual a </option>
+            <option value="distinto">Distinto de</option>
+            <option value="mayor">Mayor que</option>
+            <option value="mayorIgual">Mayor o igual que</option>
+        </select>
+    </script>

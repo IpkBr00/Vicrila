@@ -1,0 +1,409 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../css/famfamfam.css">
+
+    <link rel="stylesheet" href="../../css/ipktheme/jquery-ui-1.8.18.custom.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/estilos.css">
+    <link rel="stylesheet" href="queryBuilder.css">
+    <script type="text/javascript" src="../../js/libs/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../../js/libs/underscore-min.js"></script>
+
+    <script type="text/javascript" src='../../js/libs/jquery-1.7.1.min.js'></script>
+    <script type="text/javascript" src='../../js/libs/jquery-ui-1.8.18.custom.min.js'></script>
+    <script type="text/javascript" src="../../js/libs/jquery.layout.min.js"></script>
+    <script type="text/javascript" src="../../js/libs/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="../../js/libs/underscore-min.js"></script>
+
+    <script type="text/javascript" src="../../js/base/Utils.js"></script>
+    <script type="text/javascript" src="../../js/base/framework.base.js"></script>
+    <script type="text/javascript" src="../../js/base/framework.project.js"></script>
+    <script type="text/javascript" src="../../js/clases/DataSource.js"></script>
+
+    <script type="text/javascript" src="../../js/controles/form.CheckBox.js"></script>
+    <script type="text/javascript" src="../../js/controles/form.Hidden.js"></script>
+    <script type="text/javascript" src="../../js/controles/form.Textbox.js"></script>
+    <script type="text/javascript" src="../../js/controles/form.TextboxCalendario.js"></script>
+    <script type="text/javascript" src="../../js/controles/form.TextboxNumerico.js"></script>
+    <script type="text/javascript" src="../../js/controles/form.ComboNavision.js"></script>
+    <script type="text/javascript" src="../../js/controles/form.ComboInterno.js"></script>
+
+    <script type="text/javascript" src="../../js/controles/ipkRemoteDataSource.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkToolbar.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkLista.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkTabla.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkFicha.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkRemoteTabla.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkTablaEditable.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkTablaRelacion.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkTablaHijos.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkMostrarElegir.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkRemoteFicha.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkRemoteInfraestructura.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkRemoteDataSourceNavision.js"></script>
+    <script type="text/javascript" src="../../js/controles/ipkFactory.js"></script>
+
+    <script type="text/javascript" src="../../js/componentes/IpkComportamientos.js"></script>
+
+    <title>Query Builder</title>
+</head>
+<body>
+
+    <script type="text/template" id="optionModelos">
+        <option value="${IdModelo}">${Nombre}</option>
+    </script>
+
+    <div class='queryBuilder'>
+        <div class='header'>
+            <div class="entitySelector">
+                <label for="entidad">Entidad</label>
+                <select id="entidad"></select>
+            </div>
+            <div class="entityActions">
+                <input type="button" value="Empezar"  class="initial"/>
+                <input type="button" value="Consultar"  class="edition" accesskey="R"/>
+                <input type="button" value="Limpiar"  class="edition"/>
+            </div>
+            <div class="clearFix"></div>
+        </div>
+        <div class='body'>
+            <div class='conditionBuilder'>
+                <table>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <input type="button" value="+" class='addCondition'>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="results" style='width: 90%;'>
+
+    </div>
+
+    <script type="text/template" id="filaCondicion">
+        <tr>
+            <td>
+                <select id="joinSelector">
+                    <option value="AND">AND</option>
+                    <option value="OR">OR</option>
+                </select>
+            </td>
+            <td>
+                <select id="fieldSelector" >
+                    <option value="-1">Selecciona un campo</option>
+                </select>
+            </td>
+            <td>
+                <select id="operatorSelector">
+                </select>
+            </td>
+            <td>
+                <input type="text" >
+            </td>
+        </tr>
+    </script>
+    <script type="text/template" id="optionCamposTemplate">
+        <option value="${IdCampoModelo}">${Nombre}</option>
+    </script>
+
+    <script type="text/template" id="operadorStringTemplate">
+        <select class="operatorSelector">
+            <option value="empiezaPor">Empieza por</option>
+            <option value="contiene">Contiene</option>
+            <option value="igual">Igual</option>
+            <option value="distinto">Distinto</option>
+            <option value="terminaPor">Termina por</option>
+        </select>
+    </script>
+    <script type="text/template" id="operadorInt32Template">
+        <select class="operatorSelector">
+            <option value="menorIgual">Menor o igual que</option>
+            <option value="menor">Menor que</option>
+            <option value="igual">Igual a </option>
+            <option value="distinto">Distinto de</option>
+            <option value="mayor">Mayor que</option>
+            <option value="mayorIgual">Mayor o igual que</option>
+        </select>
+    </script>
+    <script type="text/template" id="operadorDoubleTemplate">
+        <select class="operatorSelector">
+            <option value="menorIgual">Menor o igual que</option>
+            <option value="menor">Menor que</option>
+            <option value="igual">Igual a </option>
+            <option value="distinto">Distinto de</option>
+            <option value="mayor">Mayor que</option>
+            <option value="mayorIgual">Mayor o igual que</option>
+        </select>
+    </script>
+
+    <script type="text/template" id="operadorBooleanTemplate">
+        <select class="operatorSelector">
+            <option value="menorIgual">Menor o igual que</option>
+            <option value="menor">Menor Que</option>
+            <option value="igual">Igual A </option>
+            <option value="mayor">Mayor Que</option>
+            <option value="mayorIgual">Mayor o igual que</option>
+        </select>
+    </script>
+
+    <script type="text/template" id="operadorDateTimeTemplate">
+        <select class="operatorSelector">
+            <option value="menorIgual">Menor o igual que</option>
+            <option value="menor">Menor que</option>
+            <option value="igual">Igual a </option>
+            <option value="distinto">Distinto de</option>
+            <option value="mayor">Mayor que</option>
+            <option value="mayorIgual">Mayor o igual que</option>
+        </select>
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        var infraestructura = undefined,
+            factoria = undefined,
+            modelo = undefined,
+            campos = undefined,
+            comboCampos = undefined,
+            tabla = undefined,
+            ds = undefined;
+
+        function getQuery(){
+            var query = '';
+
+            var $filas = $('.conditionBuilder table tbody tr');
+            $.each($filas, function(indice, $fila){
+                query += getCondition(indice, $fila);
+            });
+
+            return query;
+        }
+        function getCondition(indice, $fila){
+            var celdas = $('td', $fila);
+
+            var condicion = {
+                orden : indice,
+                operadorLogico : (indice > 0) ? $('select' , celdas[0]).eq(0).val() : '',
+                campo : $('select' , celdas[1]).eq(0).find('option:selected').text(),
+                tipo : $($fila).data('tipo'),
+                operador : $('select' , celdas[2]).eq(0).val(),
+                valor: $('input' , celdas[3]).eq(0).val()
+            };
+            console.log(condicion);
+            console.log( getConditionString(condicion) );
+
+            return getConditionString(condicion);
+        }
+        function getConditionString( condition ){
+            var conditionString = '';
+
+            conditionString += ' ' + condition.operadorLogico + ' ';
+            conditionString += ' it.' + condition.campo + ' ';
+            conditionString += ' ' + formatearOperador(condition.operador) + ' ';
+            conditionString += ' ' + formatearValor(condition.valor, condition.tipo, condition.operador) + ' ';
+
+            return conditionString;
+        }
+
+        function formatearOperador(operador){
+            var valorFormateado = '';
+
+            switch (operador)
+            {
+                case 'empiezaPor':
+                    valorFormateado = " LIKE ";
+                    break;
+                case 'terminaPor':
+                    valorFormateado = " LIKE ";
+                    break;
+                case 'contiene':
+                    valorFormateado = " LIKE ";
+                    break;
+                case 'menorIgual':
+                    valorFormateado = " <= ";
+                    break;
+                case 'menor':
+                    valorFormateado = " < ";
+                    break;
+                case 'igual':
+                    valorFormateado = " = ";
+                    break;
+                case 'distinto':
+                    valorFormateado = " <> ";
+                    break;
+                case 'mayor':
+                    valorFormateado = " > ";
+                    break;
+                case 'mayorIgual':
+                    valorFormateado = " >= ";
+                    break;
+            }
+            return valorFormateado;
+        }
+        function formatearValor( valor, tipo, operador){
+            var valorFormateado = '';
+
+            switch (tipo)
+            {
+                case 'String':
+                    valorFormateado = " '" + formatearValorString(valor, operador) + "' ";
+                    break;
+                case 'Int32':
+                    valorFormateado = valor;
+                    break;
+                case 'Double':
+                    valorFormateado = valor;
+                    break;
+                case 'DateTime':
+                    valorFormateado = " DATETIME'" + valor.substring(valor.length - 4) +'-' + valor.substring(3, 5) + '-'  + valor.substring(0,2) + " 00:00' ";
+                    break;
+                case 'Boolean':
+                    valorFormateado = " " + valor + " ";
+                    break;
+                default:
+                    valorFormateado = valor;
+                    break;
+            }
+            return valorFormateado;
+        }
+        function formatearValorString( valor, operador){
+            var valorFormateado = '';
+
+            switch (operador)
+            {
+                case 'empiezaPor':
+                    valorFormateado =  valor + "%";
+                    break;
+                case 'terminaPor':
+                    valorFormateado =  "%" + valor ;
+                    break;
+                case 'contiene':
+                    valorFormateado = "%" + valor  + "%";
+                    break;
+                default :
+                    valorFormateado = valor;
+                    break;
+            }
+            return valorFormateado;
+        }
+        
+        $(document).ready(function(){
+            $('.entityActions input[type=button]').on('click', function(){ ds.Filtrar(getQuery()); });
+
+            infraestructura = new IpkInfraestructura();
+            infraestructura.getModelos();
+            infraestructura.onGetModelos = function(listadoModelos){
+                $('select#entidad option').remove();
+                $('#optionModelos').tmpl(listadoModelos).appendTo('select#entidad');
+                $('select#entidad').prepend('<option value="-1">Selecciona una entidad</option>');
+            };
+            infraestructura.onGetModelo = function(Modelo){
+                $('.conditionBuilder table tbody tr').remove();
+                modelo = Modelo;
+                campos = Modelo.zz_CamposModelos;
+                factoria.getRemoteDataSource(Modelo.Nombre, 'ds');
+                var configuracion = {
+                    contenedor : 'results',
+                    Nombre : 'results',
+                    Listado : Modelo.Nombre,
+                    Ficha : Modelo.Nombre
+                };
+
+                factoria.getTabla(Modelo.Nombre, 'tabla', configuracion);
+                comboCampos = crearComboCampos(Modelo.zz_CamposModelos);
+            };
+
+            factoria = new IpkRemoteFactory();
+            factoria.onGetRemoteDataSource = function(respuesta){
+                ds = respuesta.control;
+                ds.onListado = function(respuesta){
+                    listado = respuesta.datos;
+                };
+                ds.onFiltrar = function(respuesta){
+                    console.log('Registro con estas condiciones : ' + respuesta.datos.length);
+                    console.log(respuesta.datos);
+                    tabla.setDatos(respuesta.datos);
+                };
+            };
+            factoria.onGetListado = function(respuesta){
+                tabla = respuesta.control;
+            };
+
+            function crearComboCampos(CamposModelo){
+                var camposSeleccionables = _.filter(CamposModelo, function(campo){ return campo.Tipo != 'Reference' && campo.Tipo != 'Collection'; });
+
+                var $select = $('<select></select>');
+                $select.addClass('fieldSelector');
+                $select.append($('#optionCamposTemplate').tmpl(camposSeleccionables));
+
+                return $select;
+            }
+            function crearFilaCondicion(){
+                var fila = $($('#filaCondicion').html());
+                $('.conditionBuilder table tbody').append( fila );
+
+                if($('.conditionBuilder table tbody tr').length == 1)
+                    $('td', fila).eq(0).find('select').remove();
+
+                ds.Listado();
+
+                $('td', fila).eq(1).find('select').remove();
+                $('td', fila).eq(1).append( $(comboCampos).clone() );
+                $('td', fila).eq(1).find('select').eq(0).on('change', function(){
+                    var id = parseInt($(this).val());
+                    var campo = _.find(campos , function(campo){ return campo.IdCampoModelo == id; });
+
+                    $(this).closest('tr').find('td').eq(2).find('select').remove();
+                    $(this).closest('tr').find('td').eq(2).append(crearOperadorParaTipo(campo.Tipo));
+                    $(this).closest('tr').data('tipo' , campo.Tipo);
+                    $(this).closest('tr').find('td').eq(3).find('input').eq(0).autocomplete( { source : _.pluck(listado, campo.Nombre) } );
+
+                    /*
+                     TODO: Borrar cuando las pruebas de la interfaz esten terminadas
+                     console.log('AUTOCOMPLETE FOR  --> ' + campo.Nombre);
+                     console.log(_.pluck(listado, campo.Nombre));
+                     */
+                });
+
+                $('td', fila).eq(2).find('select').remove();
+            }
+
+            function crearOperadorParaTipo(Tipo){
+                switch (Tipo)
+                {
+                    case 'String':
+                        break;
+                    case 'Int32':
+                        break;
+                    case 'Double':
+                        break;
+                    case 'DateTime':
+                        break;
+                    case 'Boolean':
+                        break;
+                }
+                return $( $('#operador'+ Tipo +'Template').html() );
+            }
+
+            var that = this;
+            $('#entidad').on('change', function(){
+                infraestructura.getModeloById($('select#entidad').val());
+            });
+            $('.addCondition').on('click', function(){
+                crearFilaCondicion();
+            });
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+[
+	{
+		"Seccion": "Desarrollo Producto",
+		"Id": "DesarrolloProducto",
+		"Campos":
+		[		
+			{
+				"label": "Código",
+				"nombre": "codigo",
+				"tipo": "text",
+				"validacion" :"required"
+			},
+			{
+				"label": "Descripción",
+				"nombre": "descripcion",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Descripción2",
+				"nombre": "descripcion2",
+				"tipo": "combo",
+				"validacion" :""
+
+			},
+			{
+				"label": "Unidad medida base",
+				"nombre": "unidadMedidaBase",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Almacén defecto",
+				"nombre": "alamacenDefecto",
+				"tipo": "text",
+				"validacion" :"required"
+			},
+			{
+				"label": "Peso Bruto = peso gota",
+				"nombre": "pesoBruto",
+				"tipo": "text",
+				"validacion" :"required"
+			},
+			{
+				"label": "Peso Neto",
+				"nombre": "pesoNeto",
+				"tipo": "text",
+				"validacion" :"required"
+			},
+			{
+				"label": "Clase Vidrio",
+				"nombre": "claseVidrio",
+				"tipo": "combo",
+				"validacion" :""
+			},
+			{
+				"label": "Tratamiento térmico",
+				"nombre": "tratamientoTermico",
+				"tipo": "combo",
+				"validacion" :""
+			},
+			{
+				"label": "FDF (proceso de fabricación)",
+				"nombre": "fdf",
+				"tipo": "combo",
+				"validacion" :"required"
+			},
+			{
+				"label": "Tipo artículo de fabricación",
+				"nombre": "tipoArticulo",
+				"tipo": "text",
+				"validacion" :"required"
+			},
+			{
+				"label": "Cadencia Estándar",
+				"nombre": "cadenciaEstandar",
+				"tipo": "text",
+				"validacion" :"required"
+			},
+			{
+				"label": "% Rendimiento Estándar",
+				"nombre": "rendimientoEstandar",
+				"tipo": "text",
+				"validacion" :"required"
+			},
+		]
+	},
+	{
+		"Seccion": "Supply Chain",
+		"Id": "SupplyChain",
+		"Campos":
+		[
+			{
+				"label": "Nº Ruta",
+				"nombre": "numRuta",
+				"tipo": "text"
+			},
+			{
+				"label": "Nº LM produccion",
+				"nombre": "numLmProduccion",
+				"tipo": "text"
+			},
+			{
+				"label": "Precisión redondeo",
+				"nombre": "precisionRedondeo",
+				"tipo": "text"
+			},
+			{
+				"label": "Método de  baja",
+				"nombre": "metodoBaja",
+				"tipo": "text"
+			},
+			{
+				"label": "Politica reaprovisionamiento",
+				"nombre": "politicaReaprovisionamiento",
+				"tipo": "text"
+			},
+			{
+				"label": "Ciclo reaprovisionamiento",
+				"nombre": "cicloReaprovisionamiento",
+				"tipo": "text"
+			},
+			{
+				"label": "Reaprovisionamiento Captor",
+				"nombre": "reaprovisionamientoCaptor",
+				"tipo": "text"
+			}
+		]
+	},
+	{
+		"Seccion": "Finanzas",
+		"Id": "Finanzas",
+		"Campos":
+		[
+			{
+				"label": "Valoración Existencias",
+				"nombre": "valoracionExistencias",
+				"tipo": "combo"
+			},
+			{
+				"label": "Coste Estándar",
+				"nombre": "costeEstandar",
+				"tipo": "text"
+			},
+			{
+				"label": "Grupo contable producto",
+				"nombre": "grupoContableProducto",
+				"tipo": "combo"
+			},
+			{
+				"label": "Grupo registro IVA",
+				"nombre": "grupoRegistroIva",
+				"tipo": "combo"
+			},
+			{
+				"label": "Grupo contable existencias",
+				"nombre": "GrupoContableExistencias",
+				"tipo": "combo"
+			}
+		]
+	},
+	{
+		"Seccion": "Produccion",
+		"Id": "Produccion",
+		"Campos":
+		[
+			{
+				"label": "2064-Jefe de Equipo Composición Fusión",
+				"nombre": "jefeEquipoComposicionFusion",
+				"tipo": "text"
+			},
+			{
+				"label": "2038-Oficial de Maquinas Regulador",
+				"nombre": "oficialMaquinasRegulador",
+				"tipo": "text"
+			},
+			{
+				"label": "2029-Maquinista de Producción",
+				"nombre": "maquinistaProduccion",
+				"tipo": "text"
+			},
+			{
+				"label": "2036-Oficial de Máquina",
+				"nombre": "oficialMaquina",
+				"tipo": "text"
+			}
+		]
+	}
+]

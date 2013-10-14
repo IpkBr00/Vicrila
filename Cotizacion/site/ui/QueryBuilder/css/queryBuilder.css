@@ -1,0 +1,66 @@
+body{
+    background:#FFF;
+    font-size: 100%;
+    font-family: 'Segoe UI','Helvetica Neue', helvetica, arial, sans-serif;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.queryBuilder{
+    margin: 15px;
+    border: 1px solid #E7E8EB;
+    border: 1px solid #BDBDBD;
+    /*
+    box-shadow: 2px 2px 3px #DDD;
+    */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.queryBuilder div.header{
+    background-color: #F7F7F9;
+    background-color: #ECECEC;
+
+    border-bottom: 1px solid #E7E8EB;
+    border-bottom: 1px solid #BDBDBD;
+    padding: 8px 10px;
+    color: #666;
+    /*text-shadow: #AAA 1px 2px 2px;*/
+
+    /*
+  box-shadow: 0 1px 3px #DDD;
+  background: -webkit-linear-gradient(#F1F3F3, #D4D4D4);*/
+
+    box-shadow: 0 2px 3px #EEE;
+
+    background-image: -webkit-linear-gradient(#F1F3F3, #E4E4E4);
+    background-image: -webkit-linear-gradient(#F8F8F8, #E8E8E8);
+    background-image: -webkit-linear-gradient(#FAFAFA, #F2F2F2);
+}
+.entitySelector{  float: left;  }
+.entitySelector select{ margin-left: 20px; width: 350px;}
+.entityActions{   float: right; }
+.entityActions input{
+
+    /*background-color: #e5e5e5;
+   border: 1px solid #DDD;
+   padding: 10px;*/
+}
+
+.conditionBuilder{
+    padding: 10px;
+}
+
+.clearFix{
+    clear : both;
+}

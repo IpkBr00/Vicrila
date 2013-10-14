@@ -1,0 +1,16 @@
+Aplicacion
+    Modificar los campos del listado una vez creados.
+    Recuperar información de Navision para cargarla en los articulos.
+    -- Componente filtro para poder filtrar los IpkTabla.
+    -- Formulario de copia de datos de manera que sea configurable y reutilizable.
+
+Javascript
+    Terminar de documentar el código.
+    Crear sistemas de reglas para poder dar comportamiento a los formularios por configuración.
+
+
+09/10/2012
+    -- Componente filtro para poder filtrar los IpkTabla.
+    -- Formulario de copia de datos de manera que sea configurable y reutilizable.
+           -- Crearemos un control al que pasandole los datos del registro y la informacion del modelo al que pertenece nos cree una ficha con los campos que son indices del modelo
+           -- Compruebe que los valores cambian y que son unicos en la BD.

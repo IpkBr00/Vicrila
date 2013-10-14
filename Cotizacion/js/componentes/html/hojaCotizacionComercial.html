@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Hoja cotizacion COMERCIAL </title>
+    <style type="text/css">
+        
+        .hojaCotizacion table{
+            border-collapse: collapse;
+            width : 98%;
+        }
+        .hojaCotizacion tbody td{
+            width: 50%;
+        }
+        .hojaCotizacion .borderedTable tbody td{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="dlgHojaCotizacion">
+
+        <input type="button" class='boton' id="btnExportar" value="Exportar" />
+        <br><br>
+        <div id='hojaCotizacionComercial' class='hojaCotizacion'>
+
+
+        </div>
+    </div>
+
+    <script type="text/template" id='hojaCotizacionComercialTemplate'>
+        <table id='htmlHeader' style="border-collapse: collapse;">
+            <tr>
+                <td colspan="2" style=''>
+                    <img src="http://sharepoint/SiteAssets/Images/LogoVCLsmall.jpg" alt="Logo Vicrila" title="Logo Vicrila" />
+                </td>
+                <td colspan="12" >
+                    <h3>COTIZACION PRECIO (COMERCIAL)</h3>
+                </td>
+            </tr>
+        </table>
+        <table id='excelHeader' style="border-collapse: collapse; display:none;">
+            <tr>
+                <td colspan="2" style=''>
+                    <img src="http://sharepoint/SiteAssets/Images/LogoVCLsmall.jpg" alt="Logo Vicrila" title="Logo Vicrila" />
+                    <br>
+                    <br>
+                    <br>
+                </td>
+                <td colspan="12" style=' text-align: center'>
+                    <h3>COTIZACION PRECIO</h3>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table class="borderedTable" style="border-collapse: collapse;">
+            <tr >
+                <td colspan="7" style="border: 1px solid #000;">Nº DEMANDA</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center; ">${NumDemanda}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Nº DOSSIER</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${NumDossier}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Fecha Entrada</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${FechaCreacion}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Fecha Salida</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${FechaCierre}</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <table class="borderedTable" style="border-collapse: collapse;">
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Nombre dossier</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${DescripcionArt}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Cliente</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${NombreClteSolicitante}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Codigo Cliente</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${CodCliente}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Solucion</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${NumeroSoluciones}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Descripcion solucion</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${Descripcion}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Unidad de Venta</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${UnidadMedidaVenta}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Costo en directo </td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${CostoEmbEnDirecto}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Costo en exterior</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${CostoEmbEnExterior}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Coste transporte</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${CosteTransporte}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Precio de Venta VCLX100 u.v</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${PrecioCotizacion}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Margen en directo</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${MargenEnDirecto}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Margen en exterior</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${MargenEnExterior}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Validez del precio</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${FechaValidez}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Cantidad</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${CantidadAFabricar}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Tolerancia</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${Tolerancia}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Entregas</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${Entregas}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Observaciones</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${Observaciones}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">MOQ</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${MOQ}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Disponibilidad*</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${FechaDisponibilidadNecesaria}</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: 1px solid #000;">Disponibilidad de los elementos necesarios para fabrica</td>
+                <td colspan="7" style="border: 1px solid #000; text-align: center;">${DisponibilidadFabricacion}</td>
+            </tr>
+        </table>
+        <br>
+        <span>*Valida durante 72 horas h&aacute;biles</span>
+    </script>
+</body>
+</html>

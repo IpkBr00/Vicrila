@@ -1,0 +1,146 @@
+[
+	{
+		"Seccion": "Desarrollo Producto",
+		"Id": "DesarrolloProducto",
+		"Campos":
+		[		
+			{
+				"nombre": "unidadMedidaBase",
+				"tipo": "text",
+				"valor": "UD"
+			},
+			{
+				"nombre": "alamacenDefecto",
+				"tipo": "text",
+				"valor": "22"
+			},
+			{
+				"nombre": "pesoNetoArticulo",
+				"tipo": "text",
+				"valor": "0"
+			},
+			{
+				"nombre": "pesoBrutoPalet",
+				"tipo": "text",
+				"valor": "0"
+			},
+			{
+				"nombre": "pesoNetoPalet",
+				"tipo": "text",
+				"valor": "0"
+			},
+			{
+				"nombre": "unidadesDeVenta",
+				"tipo": "text",
+				"valor": "1"
+			},
+			{
+				"nombre": "dune14",
+				"tipo": "text",
+				"valor": "99999999999999"
+			},
+			{
+				"nombre": "tipoEnfundado",
+				"tipo": "text",
+				"valor": "FUNDA"
+			},
+			{
+				"nombre": "tipoArticulo",
+				"tipo": "text",
+				"valor": "SEMITERMINADO"
+			}
+		]
+	},
+	{
+		"Seccion": "Supply Chain",
+		"Id": "SupplyChain",
+		"Campos":
+		[
+			{
+				"nombre": "precisionRedondeo",
+				"tipo": "text",
+				"valor": "1"
+
+			},
+			{
+				"nombre": "metodoBaja",
+				"tipo": "text",
+				"valor": "MANUAL"
+			},
+			{
+				"nombre": "politicaReaprovisionamiento",
+				"tipo": "text",
+				"valor": "LOTE A LOTE"
+			},
+			{
+				"nombre": "cicloReaprovisionamiento",
+				"tipo": "text",
+				"valor": "1M"
+			},
+			{
+				"nombre": "zonaAlmacenajeADAIA",
+				"tipo": "text",
+				"valor": "APC"
+			}
+		]
+	},
+	{
+		"Seccion": "Finanzas",
+		"Id": "Finanzas",
+		"Campos":
+		[
+			{
+				"nombre": "valoracionçExistencias",
+				"tipo": "combo",
+				"valor" : "MEDIO"
+			},
+			{
+				"nombre": "grupoContableProducto",
+				"tipo": "combo",
+				"valor" : "EN CURSO"
+			},
+			{
+				"nombre": "grupoRegistroIva",
+				"tipo": "combo",
+				"valor" : "IVA18"
+			},
+			{
+				"nombre": "GrupoContableExistencias",
+				"tipo": "combo",
+				"valor" : "ENCURSOVCL"
+			}
+		]
+	},
+	{
+		"Seccion": "Produccion",
+		"Id": "Produccion",
+		"Campos":
+		[
+			{
+				"nombre": "inspectorCalidad",
+				"tipo": "text",
+				"valor" : "0,167"
+			},
+			{
+				"nombre": "mecanicoFinalLínea",
+				"tipo": "text",
+				"valor" : "0,167"
+			},
+			{
+				"nombre": "carrista",
+				"tipo": "text",
+				"valor" : "0,4"
+			},
+			{
+				"nombre": "auxiliar",
+				"tipo": "text",
+				"valor" : "0,330"
+			},
+			{
+				"nombre": "maquinistaFinalLinea",
+				"tipo": "text",
+				"valor" : "0,500"
+			}
+		]
+	}
+]

@@ -1,0 +1,379 @@
+[
+	{
+		"Seccion": "Desarrollo Producto",
+		"Id": "DesarrolloProducto",
+		"Campos":
+		[		
+			{
+				"label": "Nº (Código)",
+				"nombre": "codigo",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Nº Dossier",
+				"nombre": "numDossier",
+				"tipo": "text",
+				"validacion" : ""				
+			},
+			{
+				"label": "Descripción",
+				"nombre": "descripcion",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Descripción2",
+				"nombre": "descripcion2",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Unidad medida base",
+				"nombre": "unidadMedidaBase",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Almacén defecto",
+				"nombre": "alamacenDefecto",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Unidad medida venta",
+				"nombre": "unidadMedidaVenta",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Peso Bruto unidad venta",
+				"nombre": "pesoBrutoUnidadVenta",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Peso Neto unidad venta",
+				"nombre": "pesoNetoUnidadVenta",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Peso Bruto palet",
+				"nombre": "pesoBrutoPalet",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Peso Neto palet",
+				"nombre": "pesoNetoPalet",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Denominación embalaje",
+				"nombre": "denominacionEmbalaje",
+				"tipo": "text",
+				"validacion" : "required"
+			},				
+			{
+				"label": "Clase Vidrio",
+				"nombre": "claseVidrio",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Tratamiento térmico",
+				"nombre": "tratamientoTermico",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Decorado",
+				"nombre": "decorado",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Código 5 dígitos",
+				"nombre": "codigo5Digitos",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Unidades Venta x Palet",
+				"nombre": "unidadesVentaPalet",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Código Marca",
+				"nombre": "codigoMarca",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "CB Palet",
+				"nombre": "cbPalet",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Serie",
+				"nombre": "serie",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Unidades de venta",
+				"nombre": "unidadesDeVenta",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Dune 14",
+				"nombre": "dune14",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "HCCP",
+				"nombre": "hccp",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "FDF (proceso de fabricación)",
+				"nombre": "fdf",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Proceso VCL??",
+				"nombre": "procesoVcl",
+				"tipo": "check",
+				"validacion" : "required"
+			},
+			{
+				"label": "Tipo Enfundado",
+				"nombre": "tipoEnfundado",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Tipo artículo de producción",
+				"nombre": "tipoArticulo",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Cadencia Estándar",
+				"nombre": "cadenciaEstandar",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "% Rendimiento Estándar",
+				"nombre": "rendimientoEstandar",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+		]
+	},
+	{
+		"Seccion": "Supply Chain",
+		"Id": "SupplyChain",
+		"Campos":
+		[
+			{
+				"label": "Nº Ruta",
+				"nombre": "numRuta",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Nº LM produccion",
+				"nombre": "numLmProduccion",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Precisión redondeo",
+				"nombre": "precisionRedondeo",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Método de  baja",
+				"nombre": "metodoBaja",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Politica reaprovisionamiento",
+				"nombre": "politicaReaprovisionamiento",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Ciclo reaprovisionamiento",
+				"nombre": "cicloReaprovisionamiento",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Tipo palet",
+				"nombre": "tipoPalet",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Zona almacenaje ADAIA",
+				"nombre": "zonaAlmacenajeADAIA",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Nº Palets lote control",
+				"nombre": "numPaletLoteControl",
+				"tipo": "text",
+				"validacion" : "required"
+			}
+		]
+	},
+	{
+		"Seccion": "Comercial",
+		"Id": "Comercial",
+		"Campos":
+		[
+			{
+				"label": "Modo de gestión",
+				"nombre": "modoGestion",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Sueño",
+				"nombre": "sueño",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Nomenclatura",
+				"nombre": "nomenclatura",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Clasificación ABC",
+				"nombre": "clasificacionABC",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Ciclo de vida",
+				"nombre": "cicloDeVida",
+				"tipo": "combo",
+				"validacion" : ""
+			},
+			{
+				"label": "Uso",
+				"nombre": "uso",
+				"tipo": "combo",
+				"validacion" : ""
+			}
+		]
+	},
+	{
+		"Seccion": "Finanzas",
+		"Id": "Finanzas",
+		"Campos":
+		[
+			{
+				"label": "Valoración Existencias",
+				"nombre": "valoracionçExistencias",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Coste Estándar",
+				"nombre": "costeEstandar",
+				"tipo": "text",
+				"validacion" : ""
+			},
+			{
+				"label": "Grupo contable producto",
+				"nombre": "grupoContableProducto",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Grupo registro IVA",
+				"nombre": "grupoRegistroIva",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Grupo contable existencias",
+				"nombre": "GrupoContableExistencias",
+				"tipo": "combo",
+				"validacion" : "required"
+			},
+			{
+				"label": "Código arancelario",
+				"nombre": "codigoArancelario",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "Pais",
+				"nombre": "pais",
+				"tipo": "text",
+				"validacion" : "required"
+			}
+		]
+	},
+	{
+		"Seccion": "Produccion",
+		"Id": "Produccion",
+		"Campos":
+		[
+			{
+				"label": "2021-Inspector de Calidad",
+				"nombre": "inspectorCalidad",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "2033-Mecánico Final de Línea",
+				"nombre": "mecanicoFinalLínea",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "2007-Carrista",
+				"nombre": "carrista",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "2004-Auxiliar",
+				"nombre": "auxiliar",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "2028-Maquinista de Final de Línea",
+				"nombre": "maquinistaFinalLinea",
+				"tipo": "text",
+				"validacion" : "required"
+			},
+			{
+				"label": "2020-Embalador",
+				"nombre": "embalador",
+				"tipo": "text",
+				"validacion" : "required"
+			}
+		]
+	}
+]
